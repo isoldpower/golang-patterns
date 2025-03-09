@@ -1,7 +1,7 @@
 package src
 
 import (
-	"go-pipeline/internal/util"
+	"go-patterns/internal/util"
 	"time"
 )
 

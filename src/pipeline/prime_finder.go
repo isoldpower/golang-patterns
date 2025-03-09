@@ -1,6 +1,6 @@
 package pipeline
 
-import "go-pipeline/internal/util"
+import "go-patterns/internal/util"
 
 func primeFinder(done <-chan bool, inputStream <-chan int) <-chan int {
 	primes := make(chan int)

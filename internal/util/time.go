@@ -1,7 +1,6 @@
 package util
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -24,10 +23,11 @@ func (ed *ExecutionDebugger) Summarize() time.Duration {
 	return duration
 }
 
-func DebugTime[T func(...any) any](routine T) {
-	start := time.Now()
-	routine()
+func TrackExecutionTime(command Command) time.Duration {
+	debugger := &ExecutionDebugger{}
+	debugger.Start()
+	command.Execute()
 
-	elapsed := time.Since(start)
-	fmt.Println("Execution time: ", elapsed)
+	debugger.End()
+	return debugger.Summarize()
 }

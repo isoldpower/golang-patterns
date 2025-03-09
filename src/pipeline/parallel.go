@@ -2,7 +2,7 @@ package pipeline
 
 import (
 	"fmt"
-	"go-pipeline/internal/generator"
+	"go-patterns/internal/generator"
 )
 
 type ParallelPipeline struct {

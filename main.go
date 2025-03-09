@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-pipeline/src"
+	"go-patterns/src"
 )
 
 func main() {
-	src.Execute()
+	src.ExecuteProgram()
 }
